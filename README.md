@@ -5,12 +5,12 @@ Se descargaron datos públicos la pagina de secretaria de energia https://datos.
 ![Site-Merch_Amazon-Timestream_SocialMedia_2](https://github.com/melisatirabassi/production_forecast_DeepAR_AWS/assets/124107756/dbfa65ed-819f-432f-b816-628075a2514b)
 
 
-#EDA
+# EDA
 
 En Spyder se eliminaron los espacios en blanco y acentos, se cambió la letra a miniscula, se identificaron filas duplicadas, valores nulos, se calculó la correlación entre variables, se generaron nuevas variables.
 
 
-#ML
+# ML
 
 En Spyder se clasificaron los pozos con clustering, un algoritmo no supervisado y luego se generó un modelo supervisado con árbol de decisión para predecir la clasificación de nuevos pozos.
 
@@ -19,8 +19,8 @@ En Spyder se clasificaron los pozos con clustering, un algoritmo no supervisado 
 <img width="576" alt="DecisionTree" src="https://github.com/melisatirabassi/production_forecast_DeepAR_AWS/assets/124107756/a211d25e-4e63-4952-9b00-5abb07a1c75b">
 
 
+# AWS
 
-#AWS
 Se utilizó DeepAR de AWS predecir la producción de los pozos de un cluster.Luego se utilizaron nuevos pozos que pertenecerían a dicho cluster para predecir su comportamiento. DeepAR se encuentra dentro de Sagemaker que solo interactua con archivos que se encuentran en S3.
 Por qué se utilizó DeepAr de AWS y no redes LSTM, ARIMA o Prophet? Principalmente porque se ultizó como base en el research article  Machine learning based decline curve analysis for short term oil porduction forecast. En este articulo en la introducción se hace referencia a varios papers donde se realizo forecast de producción en pozos no convencionales con redes LSTM principalmente en campos se USA. En el el research article se compara el uso de DeepAR y Prophet para decir la producción de petroleo no convencional de 22 pozos de Midland en USA. El resultado fue que el forecast a 24 meses fue bueno pero a 48 meses no para ambos algoritmos.
 
